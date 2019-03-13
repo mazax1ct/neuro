@@ -1,0 +1,254 @@
+$cardHeight: 100px
+$cardWidth: 100px
+$cardIndet: 15px
+$cardQnt: 18
+$cardsInRow: 7
+
+.neuro
+  background-color: #fafafa
+  display: flex
+  flex-direction: column
+  height: 100%
+  margin-left: auto
+  margin-right: auto
+  padding-top: 10px
+  padding-bottom: 10px
+  max-width: 800px
+  user-select: none
+
+  &__row
+    display: flex
+    justify-content: center
+    margin-bottom: 10px
+    padding-left: 6px
+    padding-right: 6px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__row-cell
+    display: flex
+    margin-left: 3px
+    margin-right: 3px
+    width: calc(25% - 6px)
+
+    &--double
+      width: calc(50% - 6px)
+
+  &__timer
+    font-size: 14px
+    margin-bottom: 5px
+    margin-top: 0
+    text-align: center
+
+  &__turn
+    font-size: 14px
+    margin: 0
+    margin-top: 0
+    text-align: center
+
+  &__end-turn
+    background-color: #ccc
+    border: none
+    border-radius: 6px
+    cursor: pointer
+    font-size: 18px
+    height: 100px
+    text-align: center
+
+.turn-info
+  justify-content: center
+  flex-direction: column
+
+.field-block
+  align-items: center
+  flex-grow: 1
+  flex-direction: column
+  justify-content: center
+
+.field
+  outline: 1px solid #1e1e1e
+  display: flex
+  flex-wrap: wrap
+  height: 100%
+  width: 100%
+
+  &__cell
+    border-bottom: 1px solid #1e1e1e
+    border-right: 1px solid #1e1e1e
+    cursor: pointer
+    height: calc(100% / 3)
+    position: relative
+    width: calc(100% / 3)
+
+    &:nth-child(3),
+    &:nth-child(6),
+    &:nth-child(9)
+      border-right: none
+
+    &:nth-last-child(1),
+    &:nth-last-child(2),
+    &:nth-last-child(3)
+      border-bottom: none
+
+    &:hover
+      &::after
+        background-color: #ccc
+        border-radius: 50%
+        content: ''
+        height: 30px
+        left: 50%
+        opacity: 0.5
+        position: absolute
+        transform: translate(-50%, -50%)
+        top: 50%
+        width: 30px
+
+    &.is-active,
+    &.is-active:hover
+      &::after
+        background-color: #ccc
+        border-radius: 50%
+        content: ''
+        height: 30px
+        left: 50%
+        opacity: 1
+        position: absolute
+        transform: translate(-50%, -50%)
+        top: 50%
+        width: 30px
+
+.card
+  background-color: #ccc
+  border-radius: 6px
+  box-shadow: 0 0 0 1px #1e1e1e
+
+  &--deck
+    .card__image
+      background: none
+      box-shadow: none
+
+  &__title
+    color: #1e1e1e
+    font-size: 8px
+    margin: 0
+    padding-top: 10px
+    padding-bottom: 10px
+    text-shadow: 0 0 1px #fff
+    text-align: center
+
+  &__description
+    color: #1e1e1e
+    display: none
+    font-size: 9px
+    line-height: 1.4
+    margin-top: 0
+    padding-left: 15px
+    padding-right: 15px
+    text-align: center
+
+  &__image-outer
+    padding: 4px
+
+  &__image
+    background-color: #eaeaea
+    box-shadow: 0 0 0 1px #1e1e1e
+    border-radius: 6px
+    padding: 4px
+
+.stack
+  cursor: pointer
+  position: relative
+  z-index: 1
+
+  &::after
+    background-color: #000
+    content: ''
+    height: 0
+    left: 50%
+    opacity: 0
+    position: fixed
+    top: 50%
+    transform: translate(-50%, -50%)
+    transition: height 0s, width 0s, opacity 0.2s
+    visibility: hidden
+    width: 0
+    z-index: -1
+
+  &.is-open
+    z-index: 2
+
+    &::after
+      display: block
+      height: 100%
+      opacity: 0.5
+      visibility: visible
+      width: 100%
+
+    .stack__list
+      display: block
+      left: 0
+      position: fixed
+      top: 50%
+      transform: translateY(-50%)
+      width: 100%
+      z-index: 2
+
+  &__bottom
+    z-index: 1
+
+    .card__image
+      opacity: 0.7
+
+  &__top
+    left: 0
+    position: absolute
+    top: 0
+    z-index: 2
+
+    .card
+      background: none
+
+      &__image
+        background: none
+
+  &__list
+    display: none
+
+.cards-slider
+  display: flex
+  overflow-x: auto
+  overflow-y: hidden
+  scroll-snap-type: mandatory
+  scroll-snap-points-x: repeat(100%)
+
+  &__slide
+    align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    min-width: 100%
+    padding-top: 5px
+    padding-bottom: 5px
+
+  .card
+    display: flex
+    flex-direction: column
+    height: 100%
+    width: 280px
+
+    &__title
+      font-size: 20px
+      padding-top: 30px
+      padding-bottom: 30px
+
+    &__description
+      display: block
+      flex-grow: 1
+
+    &__image-outer
+      padding: 15px
+
+.end-turn
+  align-items: center
+  justify-content: center
