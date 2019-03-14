@@ -16,24 +16,23 @@
 
   <link rel="stylesheet" href="css/style.css"/>
 </head>
-
 <body>
+  <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="close" viewBox="0 0 512 512">
+      <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 464c-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216 0 118.7-96.1 216-216 216zm94.8-285.3L281.5 256l69.3 69.3c4.7 4.7 4.7 12.3 0 17l-8.5 8.5c-4.7 4.7-12.3 4.7-17 0L256 281.5l-69.3 69.3c-4.7 4.7-12.3 4.7-17 0l-8.5-8.5c-4.7-4.7-4.7-12.3 0-17l69.3-69.3-69.3-69.3c-4.7-4.7-4.7-12.3 0-17l8.5-8.5c4.7-4.7 12.3-4.7 17 0l69.3 69.3 69.3-69.3c4.7-4.7 12.3-4.7 17 0l8.5 8.5c4.6 4.7 4.6 12.3 0 17z" />
+    </symbol>
+  </svg>
   <div class="neuro">
     <div class="neuro__row">
       <div class="neuro__row-cell">
         <div class="stack">
+          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
           <div class="stack__bottom">
             <div class="card">
               <p class="card__title">&nbsp;</p>
               <div class="card__image-outer">
                 <div class="card__image">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                    <g>
-                      <circle cx="16.65" cy="16.65" r="7" style="fill:#fff" />
-                      <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
-                      <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
-                    </g>
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
                 </div>
               </div>
             </div>
@@ -180,93 +179,265 @@
     </div>
     <div class="neuro__row">
       <div class="neuro__row-cell">
-        <div class="card">
-          <p class="card__title">НЕЙРОАТАКА</p>
-          <div class="card__image-outer">
-            <div class="card__image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <g>
-                  <line x1="33.3" y1="0" x2="33.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
-                  <line x1="66.3" y1="0" x2="66.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
-                  <line x1="0" y1="33.3" x2="100" y2="33.3" style="stroke:black;fill:none;stroke-width:1px;"/>
-                  <line x1="0" y1="66.6" x2="100" y2="66.6" style="stroke:black;fill:none;stroke-width:1px;"/>
-                </g>
-                <g>
-                  <circle cx="16.65" cy="83.25" r="7" style="fill:#fff" />
-                  <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
-                  <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
-                </g>
-                <polyline stroke="#ffffff" stroke-width="1px" fill="none" points="16.65,83.25 49.95,16.65 83.25,49.95" />
-              </svg>
+        <div class="stack">
+          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
+          <div class="stack__bottom">
+            <div class="card">
+              <p class="card__title">&nbsp;</p>
+              <div class="card__image-outer">
+                <div class="card__image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stack__top">
+            <div class="card">
+              <p class="card__title">НЕЙРОАТАКА</p>
+              <div class="card__image-outer">
+                <div class="card__image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <g>
+                      <line x1="33.3" y1="0" x2="33.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                      <line x1="66.3" y1="0" x2="66.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                      <line x1="0" y1="33.3" x2="100" y2="33.3" style="stroke:black;fill:none;stroke-width:1px;"/>
+                      <line x1="0" y1="66.6" x2="100" y2="66.6" style="stroke:black;fill:none;stroke-width:1px;"/>
+                    </g>
+                    <g>
+                      <circle cx="16.65" cy="83.25" r="7" style="fill:#fff" />
+                      <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
+                      <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
+                    </g>
+                    <polyline stroke="#ffffff" stroke-width="1px" fill="none" points="16.65,83.25 49.95,16.65 83.25,49.95" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stack__list">
+            <div class="cards-slider">
+              <div class="cards-slider__slide">
+                <div class="card">
+                  <p class="card__title">НЕЙРОАТАКА</p>
+                  <p class="card__description">Позволяет уничтожить одну из нейросвязей противника при условии, что в сети активна эта всязь.<br> <em>*Никаких действий после активации не производится</em></p>
+                  <div class="card__image-outer">
+                    <div class="card__image">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <g>
+                          <line x1="33.3" y1="0" x2="33.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                          <line x1="66.3" y1="0" x2="66.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                          <line x1="0" y1="33.3" x2="100" y2="33.3" style="stroke:black;fill:none;stroke-width:1px;"/>
+                          <line x1="0" y1="66.6" x2="100" y2="66.6" style="stroke:black;fill:none;stroke-width:1px;"/>
+                        </g>
+                        <g>
+                          <circle cx="16.65" cy="83.25" r="7" style="fill:#fff" />
+                          <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
+                          <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
+                        </g>
+                        <polyline stroke="#ffffff" stroke-width="1px" fill="none" points="16.65,83.25 49.95,16.65 83.25,49.95" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="neuro__row-cell">
-        <div class="card">
-          <p class="card__title">АЛЬФА НЕЙРОН</p>
-          <div class="card__image-outer">
-            <div class="card__image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <g>
-                  <line x1="33.3" y1="0" x2="33.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
-                  <line x1="66.3" y1="0" x2="66.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
-                  <line x1="0" y1="33.3" x2="100" y2="33.3" style="stroke:black;fill:none;stroke-width:1px;"/>
-                  <line x1="0" y1="66.6" x2="100" y2="66.6" style="stroke:black;fill:none;stroke-width:1px;"/>
-                </g>
-                <g>
-                  <circle cx="16.65" cy="83.25" r="7" style="fill:#fff" />
-                  <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
-                  <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
-                </g>
-                <polyline stroke="#ffffff" stroke-width="1px" fill="none" points="16.65,83.25 49.95,16.65 83.25,49.95" />
-              </svg>
+        <div class="stack">
+          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
+          <div class="stack__bottom">
+            <div class="card">
+              <p class="card__title">&nbsp;</p>
+              <div class="card__image-outer">
+                <div class="card__image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stack__top">
+            <div class="card">
+              <p class="card__title">АЛЬФА НЕЙРОН</p>
+              <div class="card__image-outer">
+                <div class="card__image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <g>
+                      <line x1="33.3" y1="0" x2="33.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                      <line x1="66.3" y1="0" x2="66.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                      <line x1="0" y1="33.3" x2="100" y2="33.3" style="stroke:black;fill:none;stroke-width:1px;"/>
+                      <line x1="0" y1="66.6" x2="100" y2="66.6" style="stroke:black;fill:none;stroke-width:1px;"/>
+                    </g>
+                    <g>
+                      <circle cx="16.65" cy="83.25" r="7" style="fill:#fff" />
+                      <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
+                      <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
+                    </g>
+                    <polyline stroke="#ffffff" stroke-width="1px" fill="none" points="16.65,83.25 49.95,16.65 83.25,49.95" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stack__list">
+            <div class="cards-slider">
+              <div class="cards-slider__slide">
+                <div class="card">
+                  <p class="card__title">АЛЬФА НЕЙРОН</p>
+                  <p class="card__description">Использовав эту нейросвязь можно активировать ещё один нейрон</p>
+                  <div class="card__image-outer">
+                    <div class="card__image">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <g>
+                          <line x1="33.3" y1="0" x2="33.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                          <line x1="66.3" y1="0" x2="66.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                          <line x1="0" y1="33.3" x2="100" y2="33.3" style="stroke:black;fill:none;stroke-width:1px;"/>
+                          <line x1="0" y1="66.6" x2="100" y2="66.6" style="stroke:black;fill:none;stroke-width:1px;"/>
+                        </g>
+                        <g>
+                          <circle cx="16.65" cy="83.25" r="7" style="fill:#fff" />
+                          <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
+                          <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
+                        </g>
+                        <polyline stroke="#ffffff" stroke-width="1px" fill="none" points="16.65,83.25 49.95,16.65 83.25,49.95" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="neuro__row-cell">
-        <div class="card">
-          <p class="card__title">МАКРОСВЯЗЬ</p>
-          <div class="card__image-outer">
-            <div class="card__image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <g>
-                  <line x1="33.3" y1="0" x2="33.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
-                  <line x1="66.3" y1="0" x2="66.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
-                  <line x1="0" y1="33.3" x2="100" y2="33.3" style="stroke:black;fill:none;stroke-width:1px;"/>
-                  <line x1="0" y1="66.6" x2="100" y2="66.6" style="stroke:black;fill:none;stroke-width:1px;"/>
-                </g>
-                <g>
-                  <circle cx="16.65" cy="83.25" r="7" style="fill:#fff" />
-                  <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
-                  <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
-                </g>
-                <polyline stroke="#ffffff" stroke-width="1px" fill="none" points="16.65,83.25 49.95,16.65 83.25,49.95" />
-              </svg>
+        <div class="stack">
+          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
+          <div class="stack__bottom">
+            <div class="card">
+              <p class="card__title">&nbsp;</p>
+              <div class="card__image-outer">
+                <div class="card__image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stack__top">
+            <div class="card">
+              <p class="card__title">МАКРОСВЯЗЬ</p>
+              <div class="card__image-outer">
+                <div class="card__image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <g>
+                      <line x1="33.3" y1="0" x2="33.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                      <line x1="66.3" y1="0" x2="66.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                      <line x1="0" y1="33.3" x2="100" y2="33.3" style="stroke:black;fill:none;stroke-width:1px;"/>
+                      <line x1="0" y1="66.6" x2="100" y2="66.6" style="stroke:black;fill:none;stroke-width:1px;"/>
+                    </g>
+                    <g>
+                      <circle cx="16.65" cy="83.25" r="7" style="fill:#fff" />
+                      <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
+                      <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
+                    </g>
+                    <polyline stroke="#ffffff" stroke-width="1px" fill="none" points="16.65,83.25 49.95,16.65 83.25,49.95" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stack__list">
+            <div class="cards-slider">
+              <div class="cards-slider__slide">
+                <div class="card">
+                  <p class="card__title">МАКРОСВЯЗЬ</p>
+                  <p class="card__description">Активирует все нейроны сети, задействованные во всех твоих нейросвязях</p>
+                  <div class="card__image-outer">
+                    <div class="card__image">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <g>
+                          <line x1="33.3" y1="0" x2="33.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                          <line x1="66.3" y1="0" x2="66.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                          <line x1="0" y1="33.3" x2="100" y2="33.3" style="stroke:black;fill:none;stroke-width:1px;"/>
+                          <line x1="0" y1="66.6" x2="100" y2="66.6" style="stroke:black;fill:none;stroke-width:1px;"/>
+                        </g>
+                        <g>
+                          <circle cx="16.65" cy="83.25" r="7" style="fill:#fff" />
+                          <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
+                          <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
+                        </g>
+                        <polyline stroke="#ffffff" stroke-width="1px" fill="none" points="16.65,83.25 49.95,16.65 83.25,49.95" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="neuro__row-cell">
-        <div class="card">
-          <p class="card__title">НЕЙРОСДВИГ</p>
-          <div class="card__image-outer">
-            <div class="card__image">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <g>
-                  <line x1="33.3" y1="0" x2="33.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
-                  <line x1="66.3" y1="0" x2="66.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
-                  <line x1="0" y1="33.3" x2="100" y2="33.3" style="stroke:black;fill:none;stroke-width:1px;"/>
-                  <line x1="0" y1="66.6" x2="100" y2="66.6" style="stroke:black;fill:none;stroke-width:1px;"/>
-                </g>
-                <g>
-                  <circle cx="16.65" cy="83.25" r="7" style="fill:#fff" />
-                  <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
-                  <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
-                </g>
-                <polyline stroke="#ffffff" stroke-width="1px" fill="none" points="16.65,83.25 49.95,16.65 83.25,49.95" />
-              </svg>
+        <div class="stack">
+          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
+          <div class="stack__bottom">
+            <div class="card">
+              <p class="card__title">&nbsp;</p>
+              <div class="card__image-outer">
+                <div class="card__image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stack__top">
+            <div class="card">
+              <p class="card__title">НЕЙРОСДВИГ</p>
+              <div class="card__image-outer">
+                <div class="card__image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <g>
+                      <line x1="33.3" y1="0" x2="33.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                      <line x1="66.3" y1="0" x2="66.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                      <line x1="0" y1="33.3" x2="100" y2="33.3" style="stroke:black;fill:none;stroke-width:1px;"/>
+                      <line x1="0" y1="66.6" x2="100" y2="66.6" style="stroke:black;fill:none;stroke-width:1px;"/>
+                    </g>
+                    <g>
+                      <circle cx="16.65" cy="83.25" r="7" style="fill:#fff" />
+                      <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
+                      <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
+                    </g>
+                    <polyline stroke="#ffffff" stroke-width="1px" fill="none" points="16.65,83.25 49.95,16.65 83.25,49.95" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stack__list">
+            <div class="cards-slider">
+              <div class="cards-slider__slide">
+                <div class="card">
+                  <p class="card__title">НЕЙРОСДВИГ</p>
+                  <p class="card__description">Все активные нейроны сдвигаются на один шаг в любую из четырех сторон. Нейроны оказавшиеся за пределами сети уничтожаются</p>
+                  <div class="card__image-outer">
+                    <div class="card__image">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <g>
+                          <line x1="33.3" y1="0" x2="33.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                          <line x1="66.3" y1="0" x2="66.3" y2="100" style="stroke:black;fill:none;stroke-width:1px;"/>
+                          <line x1="0" y1="33.3" x2="100" y2="33.3" style="stroke:black;fill:none;stroke-width:1px;"/>
+                          <line x1="0" y1="66.6" x2="100" y2="66.6" style="stroke:black;fill:none;stroke-width:1px;"/>
+                        </g>
+                        <g>
+                          <circle cx="16.65" cy="83.25" r="7" style="fill:#fff" />
+                          <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
+                          <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
+                        </g>
+                        <polyline stroke="#ffffff" stroke-width="1px" fill="none" points="16.65,83.25 49.95,16.65 83.25,49.95" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -288,6 +459,7 @@
     <div class="neuro__row">
       <div class="neuro__row-cell">
         <div class="stack">
+          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
           <div class="stack__bottom">
             <div class="card">
               <p class="card__title">&nbsp;</p>
@@ -352,6 +524,10 @@
                     </div>
                   </div>
                 </div>
+                <div class="cards-slider__slide-buttons">
+                  <button class="cards-slider__slide-button" type="button">Предпросмотр</button>
+                  <button class="cards-slider__slide-button" type="button">Применить</button>
+                </div>
               </div>
               <div class="cards-slider__slide">
                 <div class="card">
@@ -375,6 +551,10 @@
                       </svg>
                     </div>
                   </div>
+                </div>
+                <div class="cards-slider__slide-buttons">
+                  <button class="cards-slider__slide-button" type="button">Предпросмотр</button>
+                  <button class="cards-slider__slide-button" type="button">Применить</button>
                 </div>
               </div>
               <div class="cards-slider__slide">
@@ -400,6 +580,10 @@
                     </div>
                   </div>
                 </div>
+                <div class="cards-slider__slide-buttons">
+                  <button class="cards-slider__slide-button" type="button">Предпросмотр</button>
+                  <button class="cards-slider__slide-button" type="button">Применить</button>
+                </div>
               </div>
               <div class="cards-slider__slide">
                 <div class="card">
@@ -424,6 +608,10 @@
                     </div>
                   </div>
                 </div>
+                <div class="cards-slider__slide-buttons">
+                  <button class="cards-slider__slide-button" type="button">Предпросмотр</button>
+                  <button class="cards-slider__slide-button" type="button">Применить</button>
+                </div>
               </div>
             </div>
           </div>
@@ -434,18 +622,13 @@
       </div>
       <div class="neuro__row-cell">
         <div class="stack">
+          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
           <div class="stack__bottom">
             <div class="card">
               <p class="card__title">&nbsp;</p>
               <div class="card__image-outer">
                 <div class="card__image">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                    <g>
-                      <circle cx="16.65" cy="16.65" r="7" style="fill:#fff" />
-                      <circle cx="49.95" cy="16.65" r="7" style="fill:#fff" />
-                      <circle cx="83.25" cy="49.95" r="7" style="fill:#fff" />
-                    </g>
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
                 </div>
               </div>
             </div>

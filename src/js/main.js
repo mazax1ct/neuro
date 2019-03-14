@@ -1,12 +1,9 @@
-$('.stack').on('click', function () {
-  $(this).addClass('is-open');
+$('.stack__top').on('click', function () {
+  $(this).parent('.stack').addClass('is-open');
 });
 
-$(document).on('click', function(e) {
-  if (!$(e.target).closest(".card").length) {
-    $('.stack').removeClass('is-open');
-  }
-  e.stopPropagation();
+$('.stack__close').on('click', function () {
+  $('.stack').removeClass('is-open');
 });
 
 $('.field__cell').on('click', function () {
@@ -18,5 +15,7 @@ $(document).ready(function () {
   var fieldWidth = $('.field').width();
   if(fieldHeight < fieldWidth) {
     $('.field').width(fieldHeight);
+  } else {
+    $('.field').height(fieldWidth);
   }
 });
