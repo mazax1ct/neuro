@@ -55,8 +55,8 @@ $cardsInRow: 7
     border: none
     border-radius: 6px
     cursor: pointer
-    font-size: 18px
-    height: 100px
+    font-size: 16px
+    height: 50px
     text-align: center
 
 .turn-info
@@ -124,8 +124,7 @@ $cardsInRow: 7
     color: #1e1e1e
     font-size: 8px
     margin: 0
-    padding-top: 10px
-    padding-bottom: 10px
+    padding-top: 5px
     text-shadow: 0 0 1px #fff
     text-align: center
 
@@ -141,13 +140,13 @@ $cardsInRow: 7
     text-align: center
 
   &__image-outer
-    padding: 4px
+    padding: 5px
 
   &__image
     background-color: #eaeaea
     box-shadow: 0 0 0 1px #1e1e1e
     border-radius: 6px
-    padding: 4px
+    padding: 5px
 
     svg
       width: 100%
@@ -248,7 +247,6 @@ $cardsInRow: 7
     display: none
 
 .cards-slider
-  display: flex
   min-height: 82%
   scroll-snap-type: x mandatory
   overflow-x: auto
@@ -259,10 +257,11 @@ $cardsInRow: 7
     display: flex
     flex-direction: column
     justify-content: center
-    min-width: 100%
+    //min-width: 100%
     padding-top: 5px
     padding-bottom: 5px
     scroll-snap-align: start
+    width: 100%
 
   &__slide-buttons
     display: flex
@@ -286,6 +285,8 @@ $cardsInRow: 7
     display: flex
     flex-direction: column
     min-height: 364px
+    margin-left: auto
+    margin-right: auto
     margin-bottom: 15px
     width: 240px
 

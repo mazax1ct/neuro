@@ -1,5 +1,6 @@
 $('.stack__top').on('click', function () {
   $(this).parent('.stack').addClass('is-open');
+  $(this).parent('.stack').find('.js-slider-init').slick('setPosition');
 });
 
 $('.stack__close').on('click', function () {
@@ -18,4 +19,9 @@ $(document).ready(function () {
   } else {
     $('.field').height(fieldWidth);
   }
+
+  $('.js-slider-init').slick({
+    dots: false,
+    arrows: false
+  });
 });
