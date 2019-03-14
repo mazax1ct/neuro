@@ -64,17 +64,18 @@ $cardsInRow: 7
   flex-direction: column
 
 .field-block
-  align-items: center
   flex-grow: 1
-  flex-direction: column
-  justify-content: center
-  background-color: purple
+  position: relative
 
 .field
   outline: 1px solid #1e1e1e
   display: flex
   flex-wrap: wrap
   height: 100%
+  left: 50%
+  position: absolute
+  transform: translateX(-50%)
+  top: 0
   width: 100%
 
   &__cell
@@ -190,12 +191,12 @@ $cardsInRow: 7
 
     .stack__list
       align-items: center
-      background-color: #fff
       bottom: 0
       display: flex
       justify-content: center
       left: 0
       height: 100%
+      min-height: 60%
       position: fixed
       right: 0
       top: 0
