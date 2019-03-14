@@ -94,19 +94,6 @@ $cardsInRow: 7
     &:nth-last-child(3)
       border-bottom: none
 
-    //&:hover
-      &::after
-        background-color: #ccc
-        border-radius: 50%
-        content: ''
-        height: 30px
-        left: 50%
-        opacity: 0.5
-        position: absolute
-        transform: translate(-50%, -50%)
-        top: 50%
-        width: 30px
-
     &.is-active,
     &.is-active:hover
       &::after
@@ -258,10 +245,8 @@ $cardsInRow: 7
 
 .cards-slider
   display: flex
+  scroll-snap-type: x mandatory
   overflow-x: auto
-  overflow-y: hidden
-  scroll-snap-type: mandatory
-  scroll-snap-points-x: repeat(100%)
 
   &__slide
     align-items: center
@@ -271,6 +256,7 @@ $cardsInRow: 7
     min-width: 100%
     padding-top: 5px
     padding-bottom: 5px
+    scroll-snap-align: start
 
   &__slide-buttons
     display: flex
