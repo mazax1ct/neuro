@@ -50,15 +50,6 @@ $cardsInRow: 7
     margin-top: 0
     text-align: center
 
-  &__end-turn
-    background-color: #ccc
-    border: none
-    border-radius: 6px
-    cursor: pointer
-    font-size: 16px
-    height: 50px
-    text-align: center
-
 .turn-info
   justify-content: center
   flex-direction: column
@@ -66,17 +57,59 @@ $cardsInRow: 7
 .field-block
   flex-grow: 1
   position: relative
+  padding-left: 70px
+  padding-right: 70px
+
+  .field
+    left: 50%
+    position: absolute
+    transform: translate(-50%, -50%)
+    top: 50%
+    width: calc(100% - 140px)
 
 .field
+  background-color: #fff
   outline: 1px solid #1e1e1e
   display: flex
   flex-wrap: wrap
   height: 100%
-  left: 50%
-  position: absolute
-  transform: translateX(-50%)
-  top: 0
   width: 100%
+
+  &.action-first-column
+    .field__cell
+      &:nth-child(3n+1)
+        background-color: #000
+
+  &.action-second-column
+    .field__cell
+      &:nth-child(3n+2)
+        background-color: #000
+
+  &.action-third-column
+    .field__cell
+      &:nth-child(3n+3)
+        background-color: #000
+
+  &.action-first-row
+    .field__cell
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3)
+        background-color: #000
+
+  &.action-second-row
+    .field__cell
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6)
+        background-color: #000
+
+  &.action-third-row
+    .field__cell
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9)
+        background-color: #000
 
   &__cell
     border-bottom: 1px solid #1e1e1e
@@ -181,9 +214,6 @@ $cardsInRow: 7
       visibility: visible
       width: 100%
 
-    .stack__close
-      display: flex
-
     .stack__bottom,
     .stack__top
       opacity: 0
@@ -192,6 +222,7 @@ $cardsInRow: 7
       align-items: center
       bottom: 0
       display: flex
+      flex-direction: column
       justify-content: center
       left: 0
       height: 100%
@@ -202,12 +233,23 @@ $cardsInRow: 7
       width: 100%
       z-index: 2
 
+  &.action
+    .stack__list > .stack__close
+      display: none
+
+    .cards-slider,
+    .stack__buttons
+      opacity: 0
+
+    .stack__action
+      display: flex
+
   &__close
     align-items: center
     background: none
     border: none
     cursor: pointer
-    display: none
+    display: flex
     height: 40px
     justify-content: center
     left: auto
@@ -246,6 +288,38 @@ $cardsInRow: 7
   &__list
     display: none
 
+  &__buttons
+    display: flex
+    justify-content: center
+    width: 100%
+
+  &__button
+    background-color: #ccc
+    border: none
+    border-radius: 6px
+    cursor: pointer
+    font-size: 14px
+    min-height: 40px
+    margin-left: 3px
+    margin-right: 3px
+    max-width: 140px
+    width: 40%
+
+  &__action
+    align-items: center
+    bottom: 0
+    display: none
+    flex-direction: column
+    justify-content: center
+    left: 0
+    height: 100%
+    min-height: 60%
+    position: fixed
+    right: 0
+    top: 0
+    width: 100%
+    z-index: 3
+
 .cards-slider
   min-height: 82%
   scroll-snap-type: x mandatory
@@ -257,28 +331,10 @@ $cardsInRow: 7
     display: flex
     flex-direction: column
     justify-content: center
-    //min-width: 100%
     padding-top: 5px
     padding-bottom: 5px
     scroll-snap-align: start
     width: 100%
-
-  &__slide-buttons
-    display: flex
-    justify-content: center
-    width: 100%
-
-  &__slide-button
-    background-color: #ccc
-    border: none
-    border-radius: 6px
-    cursor: pointer
-    font-size: 14px
-    min-height: 40px
-    margin-left: 3px
-    margin-right: 3px
-    max-width: 140px
-    width: 40%
 
   .card
     cursor: default
@@ -308,3 +364,100 @@ $cardsInRow: 7
 .end-turn
   align-items: center
   justify-content: center
+
+.button
+  align-items: center
+  background-color: #f0f0f0
+  border-radius: 6px
+  border: none
+  cursor: pointer
+  display: flex
+  font-size: 16px
+  justify-content: center
+  height: 50px
+  text-align: center
+
+  &--accept,
+  &--cancel
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 50px
+
+  &--accept
+    left: 10px
+
+  &--cancel
+    left: auto
+    right: 10px
+
+  &--action
+    position: absolute
+    width: 50px
+
+  &--type_1,
+  &--type_2,
+  &--type_3
+    top: 10px
+    transform: translateX(-50%)
+
+  &--type_1,
+  &--type_9
+    left: calc(70px + (100% - 140px) / 3 * 1 / 2)
+
+  &--type_2,
+  &--type_8
+    left: calc(70px + (100% - 140px) / 3 * 3 / 2)
+
+  &--type_3,
+  &--type_7
+    left: calc(70px + (100% - 140px) / 3 * 5 / 2)
+
+  &--type_4,
+  &--type_5,
+  &--type_6
+    left: auto
+    right: 10px
+    transform: translateY(-50%)
+
+  &--type_4,
+  &--type_12
+    top: calc(70px + (100% - 140px) / 3 * 1 / 2)
+
+  &--type_5,
+  &--type_11
+    top: calc(70px + (100% - 140px) / 3 * 3 / 2)
+
+  &--type_6,
+  &--type_10
+    top: calc(70px + (100% - 140px) / 3 * 5 / 2)
+
+  &--type_7,
+  &--type_8,
+  &--type_9
+    bottom: 10px
+    transform: translateX(-50%)
+    top: auto
+
+  &--type_10,
+  &--type_11,
+  &--type_12
+    left: 10px
+    transform: translateY(-50%)
+
+  &__icon
+    fill: #1e1e1e
+    height: 30px
+    width: 30px
+
+.action-block
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 100%
+  width: 100%
+
+  &__inner
+    margin: auto
+    padding: 70px
+    position: relative

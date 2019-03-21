@@ -22,7 +22,6 @@
     <div class="neuro__row">
       <div class="neuro__row-cell">
         <div class="stack">
-          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
           <div class="stack__bottom">
             <div class="card">
               <p class="card__title">&nbsp;</p>
@@ -57,6 +56,7 @@
             </div>
           </div>
           <div class="stack__list">
+            <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
             <div class="js-slider-init cards-slider">
               <div class="cards-slider__slide">
                 <div class="card">
@@ -176,7 +176,6 @@
     <div class="neuro__row">
       <div class="neuro__row-cell">
         <div class="stack">
-          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
           <div class="stack__bottom">
             <div class="card">
               <p class="card__title">&nbsp;</p>
@@ -211,6 +210,7 @@
             </div>
           </div>
           <div class="stack__list">
+            <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
             <div class="cards-slider">
               <div class="cards-slider__slide">
                 <div class="card">
@@ -242,7 +242,6 @@
       </div>
       <div class="neuro__row-cell">
         <div class="stack">
-          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
           <div class="stack__bottom">
             <div class="card">
               <p class="card__title">&nbsp;</p>
@@ -277,6 +276,7 @@
             </div>
           </div>
           <div class="stack__list">
+            <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
             <div class="cards-slider">
               <div class="cards-slider__slide">
                 <div class="card">
@@ -308,7 +308,6 @@
       </div>
       <div class="neuro__row-cell">
         <div class="stack">
-          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
           <div class="stack__bottom">
             <div class="card">
               <p class="card__title">&nbsp;</p>
@@ -343,6 +342,7 @@
             </div>
           </div>
           <div class="stack__list">
+            <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
             <div class="cards-slider">
               <div class="cards-slider__slide">
                 <div class="card">
@@ -374,7 +374,6 @@
       </div>
       <div class="neuro__row-cell">
         <div class="stack">
-          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
           <div class="stack__bottom">
             <div class="card">
               <p class="card__title">&nbsp;</p>
@@ -409,6 +408,7 @@
             </div>
           </div>
           <div class="stack__list">
+            <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
             <div class="cards-slider">
               <div class="cards-slider__slide">
                 <div class="card">
@@ -440,7 +440,8 @@
       </div>
     </div>
     <div class="neuro__row field-block">
-      <div class="field">
+      <button class="button button--accept" type="button"><svg class="button__icon" aria-hidden="true"><use xlink:href="#accept"/></svg></button>
+      <div id="field" class="field">
         <div class="field__cell"></div>
         <div class="field__cell"></div>
         <div class="field__cell"></div>
@@ -451,11 +452,11 @@
         <div class="field__cell"></div>
         <div class="field__cell"></div>
       </div>
+      <button class="button button--cancel" type="button"><svg class="button__icon" aria-hidden="true"><use xlink:href="#cancel"/></svg></button>
     </div>
     <div class="neuro__row">
       <div class="neuro__row-cell">
         <div class="stack">
-          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
           <div class="stack__bottom">
             <div class="card">
               <p class="card__title">&nbsp;</p>
@@ -496,6 +497,7 @@
             </div>
           </div>
           <div class="stack__list">
+            <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
             <div class="js-slider-init cards-slider">
               <div class="cards-slider__slide">
                 <div class="card">
@@ -519,10 +521,6 @@
                       </svg>
                     </div>
                   </div>
-                </div>
-                <div class="cards-slider__slide-buttons">
-                  <button class="cards-slider__slide-button" type="button">Предпросмотр</button>
-                  <button class="cards-slider__slide-button" type="button">Применить</button>
                 </div>
               </div>
               <div class="cards-slider__slide">
@@ -548,10 +546,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="cards-slider__slide-buttons">
-                  <button class="cards-slider__slide-button" type="button">Предпросмотр</button>
-                  <button class="cards-slider__slide-button" type="button">Применить</button>
-                </div>
               </div>
               <div class="cards-slider__slide">
                 <div class="card">
@@ -575,10 +569,6 @@
                       </svg>
                     </div>
                   </div>
-                </div>
-                <div class="cards-slider__slide-buttons">
-                  <button class="cards-slider__slide-button" type="button">Предпросмотр</button>
-                  <button class="cards-slider__slide-button" type="button">Применить</button>
                 </div>
               </div>
               <div class="cards-slider__slide">
@@ -604,9 +594,38 @@
                     </div>
                   </div>
                 </div>
-                <div class="cards-slider__slide-buttons">
-                  <button class="cards-slider__slide-button" type="button">Предпросмотр</button>
-                  <button class="cards-slider__slide-button" type="button">Применить</button>
+              </div>
+            </div>
+            <div class="stack__buttons">
+              <button class="js-card-action stack__button" type="button">Предпросмотр</button>
+            </div>
+            <div class="stack__action">
+              <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
+              <div class="action-block">
+                <div class="action-block__inner">
+                  <button class="js-column-action button button--action button--type_1" type="button" data-action="action-first-column"><svg class="button__icon" aria-hidden="true"><use xlink:href="#arrow-to-bottom"/></svg></button>
+                  <button class="js-column-action button button--action button--type_2" type="button" data-action="action-second-column"><svg class="button__icon" aria-hidden="true"><use xlink:href="#arrow-to-bottom"/></svg></button>
+                  <button class="js-column-action button button--action button--type_3" type="button" data-action="action-third-column"><svg class="button__icon" aria-hidden="true"><use xlink:href="#arrow-to-bottom"/></svg></button>
+                  <button class="button button--action button--type_4" type="button"><svg class="button__icon" aria-hidden="true"><use xlink:href="#arrow-to-left"/></svg></button>
+                  <button class="button button--action button--type_5" type="button"><svg class="button__icon" aria-hidden="true"><use xlink:href="#arrow-to-left"/></svg></button>
+                  <button class="button button--action button--type_6" type="button"><svg class="button__icon" aria-hidden="true"><use xlink:href="#arrow-to-left"/></svg></button>
+                  <button class="button button--action button--type_7" type="button"><svg class="button__icon" aria-hidden="true"><use xlink:href="#arrow-to-top"/></svg></button>
+                  <button class="button button--action button--type_8" type="button"><svg class="button__icon" aria-hidden="true"><use xlink:href="#arrow-to-top"/></svg></button>
+                  <button class="button button--action button--type_9" type="button"><svg class="button__icon" aria-hidden="true"><use xlink:href="#arrow-to-top"/></svg></button>
+                  <button class="js-column-action button button--action button--type_10" type="button" data-action="action-third-row"><svg class="button__icon" aria-hidden="true"><use xlink:href="#arrow-to-right"/></svg></button>
+                  <button class="js-column-action button button--action button--type_11" type="button" data-action="action-second-row"><svg class="button__icon" aria-hidden="true"><use xlink:href="#arrow-to-right"/></svg></button>
+                  <button class="js-column-action button button--action button--type_12" type="button" data-action="action-first-row"><svg class="button__icon" aria-hidden="true"><use xlink:href="#arrow-to-right"/></svg></button>
+                  <div id="action-field" class="field">
+                    <div class="field__cell"></div>
+                    <div class="field__cell"></div>
+                    <div class="field__cell"></div>
+                    <div class="field__cell"></div>
+                    <div class="field__cell"></div>
+                    <div class="field__cell"></div>
+                    <div class="field__cell"></div>
+                    <div class="field__cell"></div>
+                    <div class="field__cell"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -614,11 +633,10 @@
         </div>
       </div>
       <div class="neuro__row-cell neuro__row-cell--double end-turn">
-        <button class="neuro__end-turn" type="button">Завершить ход</button>
+        <button class="button" type="button">Завершить ход</button>
       </div>
       <div class="neuro__row-cell">
         <div class="stack">
-          <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
           <div class="stack__bottom">
             <div class="card">
               <p class="card__title">&nbsp;</p>
@@ -653,6 +671,7 @@
             </div>
           </div>
           <div class="stack__list">
+            <button class="stack__close" type="button"><svg class="stack__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
             <div class="js-slider-init cards-slider">
               <div class="cards-slider__slide">
                 <div class="card">
