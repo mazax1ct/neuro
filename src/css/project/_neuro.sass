@@ -75,6 +75,9 @@ $cardsInRow: 7
   height: 100%
   width: 100%
 
+  &--action
+    position: relative
+
   &.action-first-column
     .field__cell
       &:nth-child(3n+1)
@@ -403,52 +406,64 @@ $cardsInRow: 7
   &--type_1,
   &--type_2,
   &--type_3
-    top: 10px
+    top: -50px
     transform: translateX(-50%)
+
+    @media(min-width: 375px)
+      top: -60px
 
   &--type_1,
   &--type_9
-    left: calc(70px + (100% - 140px) / 3 * 1 / 2)
+    left: calc((100% / 3 * 1) / 2)
 
   &--type_2,
   &--type_8
-    left: calc(70px + (100% - 140px) / 3 * 3 / 2)
+    left: calc((100% / 3 * 3) / 2)
 
   &--type_3,
   &--type_7
-    left: calc(70px + (100% - 140px) / 3 * 5 / 2)
+    left: calc((100% / 3 * 5) / 2)
 
   &--type_4,
   &--type_5,
   &--type_6
     left: auto
-    right: 10px
+    right: -50px
     transform: translateY(-50%)
+
+    @media(min-width: 375px)
+      right: -60px
 
   &--type_4,
   &--type_12
-    top: calc(70px + (100% - 140px) / 3 * 1 / 2)
+    top: calc((100% / 3 * 1) / 2)
 
   &--type_5,
   &--type_11
-    top: calc(70px + (100% - 140px) / 3 * 3 / 2)
+    top: calc((100% / 3 * 3) / 2)
 
   &--type_6,
   &--type_10
-    top: calc(70px + (100% - 140px) / 3 * 5 / 2)
+    top: calc((100% / 3 * 5) / 2)
 
   &--type_7,
   &--type_8,
   &--type_9
-    bottom: 10px
+    bottom: -50px
     transform: translateX(-50%)
     top: auto
+
+    @media(min-width: 375px)
+      bottom: -60px
 
   &--type_10,
   &--type_11,
   &--type_12
-    left: 10px
+    left: -50px
     transform: translateY(-50%)
+
+    @media(min-width: 375px)
+      left: -60px
 
   &__icon
     fill: #1e1e1e
