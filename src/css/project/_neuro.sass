@@ -392,8 +392,13 @@ $cardsInRow: 7
     right: 10px
 
   &--action
+    height: 40px
     position: absolute
-    width: 50px
+    width: 40px
+
+    @media(min-width: 375px)
+      height: 50px
+      width: 50px
 
   &--type_1,
   &--type_2,
@@ -458,6 +463,9 @@ $cardsInRow: 7
   width: 100%
 
   &__inner
+    align-items: center
+    display: flex
+    justify-content: center
     margin: auto
     padding: 70px
     position: relative
