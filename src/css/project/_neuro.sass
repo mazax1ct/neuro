@@ -33,6 +33,7 @@ $cardsInRow: 7
     width: calc(25% - 6px)
 
     & > .card
+      cursor: pointer
       width: 100%
 
     &--double
@@ -146,6 +147,10 @@ $cardsInRow: 7
         top: 50%
         width: 30px
 
+.cards-small,
+.cards
+  display: none
+
 .card
   background-color: #ccc
   border-radius: 6px
@@ -186,142 +191,6 @@ $cardsInRow: 7
 
     svg
       width: 100%
-
-.stack
-  cursor: pointer
-  position: relative
-  width: 100%
-  z-index: 1
-
-  &::after
-    background-color: #000
-    content: ''
-    height: 0
-    left: 50%
-    opacity: 0
-    position: fixed
-    top: 50%
-    transform: translate(-50%, -50%)
-    transition: height 0s, width 0s, opacity 0.2s
-    visibility: hidden
-    width: 0
-    z-index: -1
-
-  &.is-open
-    z-index: 2
-
-    &::after
-      display: block
-      height: 100%
-      opacity: 0.5
-      visibility: visible
-      width: 100%
-
-    .stack__bottom,
-    .stack__top
-      opacity: 0
-
-    .stack__list
-      align-items: center
-      bottom: 0
-      display: flex
-      flex-direction: column
-      justify-content: center
-      left: 0
-      height: 100%
-      min-height: 60%
-      position: fixed
-      right: 0
-      top: 0
-      width: 100%
-      z-index: 2
-
-  &.action
-    .stack__list > .stack__close
-      display: none
-
-    .cards-slider,
-    .stack__buttons
-      opacity: 0
-
-    .stack__action
-      display: flex
-
-  &__close
-    align-items: center
-    background: none
-    border: none
-    cursor: pointer
-    display: flex
-    height: 40px
-    justify-content: center
-    left: auto
-    padding: 0
-    position: fixed
-    right: 0
-    top: 0
-    width: 40px
-    z-index: 3
-
-  &__close-icon
-    fill: #fafafa
-    height: 30px
-    width: 30px
-
-  &__bottom
-    z-index: 1
-
-    .card__image
-      opacity: 0.7
-
-    & + .stack__top
-      height: 100%
-      left: 0
-      position: absolute
-      top: 0
-      width: 100%
-      z-index: 2
-
-      .card
-        background: none
-
-        &__image
-          background: none
-
-  &__list
-    display: none
-
-  &__buttons
-    display: flex
-    justify-content: center
-    width: 100%
-
-  &__button
-    background-color: #ccc
-    border: none
-    border-radius: 6px
-    cursor: pointer
-    font-size: 14px
-    min-height: 40px
-    margin-left: 3px
-    margin-right: 3px
-    max-width: 140px
-    width: 40%
-
-  &__action
-    align-items: center
-    bottom: 0
-    display: none
-    flex-direction: column
-    justify-content: center
-    left: 0
-    height: 100%
-    min-height: 60%
-    position: fixed
-    right: 0
-    top: 0
-    width: 100%
-    z-index: 3
 
 .cards-slider
   min-height: 82%
@@ -470,6 +339,46 @@ $cardsInRow: 7
     height: 30px
     width: 30px
 
+.action
+  display: none
+
+  &.is-open
+    align-items: center
+    background-color: rgba(0,0,0,0.5)
+    bottom: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    left: 0
+    height: 100%
+    min-height: 60%
+    position: fixed
+    right: 0
+    top: 0
+    width: 100%
+    z-index: 2
+
+  &__close
+    align-items: center
+    background: none
+    border: none
+    cursor: pointer
+    display: flex
+    height: 40px
+    justify-content: center
+    left: auto
+    padding: 0
+    position: fixed
+    right: 0
+    top: 0
+    width: 40px
+    z-index: 3
+
+  &__close-icon
+    fill: #fafafa
+    height: 30px
+    width: 30px
+
 .action-block
   display: flex
   flex-direction: column
@@ -484,3 +393,86 @@ $cardsInRow: 7
     margin: auto
     padding: 70px
     position: relative
+
+  &__text
+    color: #fff
+    padding-left: 30px
+    padding-right: 30px
+
+  &__buttons
+    display: flex
+    justify-content: center
+    width: 100%
+
+  &__button
+    background-color: #ccc
+    border: none
+    border-radius: 6px
+    cursor: pointer
+    font-size: 14px
+    min-height: 40px
+    margin-left: 3px
+    margin-right: 3px
+    max-width: 140px
+    width: 40%
+
+.popup
+  display: none
+
+  &.is-open
+    align-items: center
+    background-color: rgba(0,0,0,0.5)
+    bottom: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    left: 0
+    height: 100%
+    min-height: 60%
+    position: fixed
+    right: 0
+    top: 0
+    width: 100%
+    z-index: 2
+
+  &.viewing
+    .popup__buttons
+      display: none
+
+  &__close
+    align-items: center
+    background: none
+    border: none
+    cursor: pointer
+    display: flex
+    height: 40px
+    justify-content: center
+    left: auto
+    padding: 0
+    position: fixed
+    right: 0
+    top: 0
+    width: 40px
+    z-index: 3
+
+  &__close-icon
+    fill: #fafafa
+    height: 30px
+    width: 30px
+
+  &__buttons
+    display: flex
+    justify-content: center
+    width: 100%
+
+  &__button
+    background-color: #ccc
+    border: none
+    border-radius: 6px
+    cursor: pointer
+    font-size: 14px
+    min-height: 40px
+    margin-left: 3px
+    margin-right: 3px
+    max-width: 140px
+    width: 40%
