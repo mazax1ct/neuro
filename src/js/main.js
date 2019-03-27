@@ -29,7 +29,7 @@ $('.neuro__row-cell').on('click', function () {
 
     //фильтрация слайдера
     if (filtered === false) {
-      $('.js-cards-slider').slick('slickFilter', $("#2, #4")); //передаём id карт для фильтрации
+      $('.js-cards-slider').slick('slickFilter', $("#2, #4")).slick('slickGoTo', 0); //передаём id карт для фильтрации
       filtered = true;
     } else {
       $('.js-cards-slider').slick('slickUnfilter');
@@ -44,7 +44,7 @@ $('.neuro__row-cell').on('click', function () {
 
     //фильтрация слайдера
     if (filtered === false) {
-      $('.js-cards-slider').slick('slickFilter', $("#3, #4")); //передаём id карт для фильтрации
+      $('.js-cards-slider').slick('slickFilter', $("#3, #4")).slick('slickGoTo', 0); //передаём id карт для фильтрации
       filtered = true;
     } else {
       $('.js-cards-slider').slick('slickUnfilter');
